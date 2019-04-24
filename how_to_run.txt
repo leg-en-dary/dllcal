@@ -1,0 +1,14 @@
+Steps :- 
+//swapnil_Ahire
+
+1 - Run Dlink.java File using  :- javac Dlink.java
+
+2 - Run Dlink.c File using :- javah Dlink
+
+3 - Enter This CMD.
+
+gcc -shared -fPIC -I/usr/lib/jvm/default-java/include -I/usr/lib/jvm/default-java/include/linux Dlink.c -o libDlink.so 
+
+4 - Final Run The library.
+
+java -classpath . -Djava.library.path=. Dlink
